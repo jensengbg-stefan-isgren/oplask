@@ -16,7 +16,9 @@
 import card from "../components/card";
 export default {
   name: "search",
-  components: {},
+  components: {
+    card
+  },
   data() {
     return {
       input: "",
