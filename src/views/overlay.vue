@@ -39,7 +39,6 @@ export default {
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
 $quicksand: "Quicksand", sans-serif;
-
 $black: #071619;
 
 .overlay {
