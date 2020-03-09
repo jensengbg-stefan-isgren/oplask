@@ -9,7 +9,7 @@
       id="search_photo"
       @keyup.enter="getPhotos"
     />
-    <card class="card_section" :photos="photos" />
+    <card class="card_section" :photos="photos" @openLightbox="openLightbox" />
   </section>
 </template>
 
@@ -32,6 +32,9 @@ export default {
       let data = await response.json();
       console.log(data.results);
       this.photos = data.results;
+    },
+    openLightbox() {
+      this.$emit("openLightbox", this.photos);
     }
   }
 };

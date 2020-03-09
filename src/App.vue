@@ -1,8 +1,23 @@
 <template>
   <div id="app">
-    <router-view />
+    <router-view @openLightbox="openLightbox" :photos="photos" />
   </div>
 </template>
+
+<script>
+export default {
+  data: () => {
+    return {
+      photos: []
+    };
+  },
+  methods: {
+    openLightbox(photos) {
+      this.photos = photos;
+    }
+  }
+};
+</script>
 
 <style lang="scss">
 /* FontFamily import */

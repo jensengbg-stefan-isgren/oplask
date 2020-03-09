@@ -6,10 +6,11 @@
           <i class="fas fa-times"></i>
         </button>
       </div>
-      <img class="img" src="../assets/test.jpg" alt />
+      <img class="img" :src="photo.urls.full" alt />
       <div class="footer">
         <h3 class="author">
-          <i class="fas fa-user-circle"></i> Fotograf von Fotografsson
+          <i class="fas fa-user-circle"></i>
+          {{photo.user.name}}
         </h3>
         <button class="download">Download full image</button>
       </div>
@@ -17,24 +18,23 @@
   </div>
 </template>
 
-
 <script>
 export default {
-
+  props: { photos: Array },
+  computed: {
+    photo() {
+      const index = this.$route.params.id;
+      console.log(index);
+      return this.photos[index];
+    }
+  },
   methods: {
     closeOverlay() {
       this.$router.push("/");
     }
   }
-
-  /*   computed: {
-        photo() {
-            this.$routes.
-        }
-    } */
 };
 </script>
-
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
@@ -51,6 +51,7 @@ $black: #071619;
 
   .lightbox {
     width: 50%;
+    height: 70%;
 
     .top {
       display: flex;
