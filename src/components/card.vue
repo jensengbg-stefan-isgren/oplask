@@ -17,14 +17,12 @@ export default {
   },
   data() {
     return {};
-
   },
   methods: {
     lightbox(photo) {
       console.log(photo);
       this.$router.push("/overlay", photo);
     }
-
   }
 };
 </script>
@@ -36,6 +34,7 @@ export default {
   height: 100%;
 
   display: grid;
+  justify-content: space-between;
   grid-template-columns: 30% 30% 30%;
   grid-template-rows: 30% 30% 30%;
   column-gap: 1rem;

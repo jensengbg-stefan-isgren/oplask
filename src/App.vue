@@ -19,8 +19,6 @@ $grey: #eeeeee;
 }
 #app {
   font-family: $quicksand;
-  height: 100vh;
-  width: 100vh;
   display: flex;
   justify-content: center;
 }

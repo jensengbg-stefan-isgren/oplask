@@ -57,17 +57,18 @@ export default {
 
 .input_search {
   text-align: center;
-  width: 400px;
+  width: 100%;
   height: 50px;
-  border: none;
-  background-color: #eeeeee;
-  border-radius: 80px;
-  outline: none;
 }
 
 .title {
   align-self: flex-start;
   margin-top: 40px;
   margin-bottom: 20px;
+}
+
+.card_section {
+  margin-top: 20px;
+  width: 100%;
 }
 </style>
