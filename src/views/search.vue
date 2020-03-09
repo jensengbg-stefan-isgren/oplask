@@ -56,8 +56,11 @@ export default {
 }
 
 .input_search {
+  text-align: center;
   width: 400px;
   height: 50px;
+  border: none;
+  background-color: #eeeeee;
   border-radius: 80px;
   outline: none;
 }
