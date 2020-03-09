@@ -12,7 +12,7 @@ const routes = [
     component: search
   },
   {
-    path: "/overlay",
+    path: "/overlay/:id",
     name: "overlay",
     component: overlay
   }

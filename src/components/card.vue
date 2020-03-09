@@ -1,13 +1,10 @@
-
 <template>
   <div class="cards">
-    <li @click="lightbox(photo)" class="card" v-for="(photo,index) in photos" :key="index">
+    <li @click="lightbox(index)" class="card" v-for="(photo,index) in photos" :key="index">
       <img :src="photo.urls.regular" alt />
     </li>
   </div>
 </template>
-
-
 
 <script>
 export default {
@@ -19,14 +16,14 @@ export default {
     return {};
   },
   methods: {
-    lightbox(photo) {
-      console.log(photo);
-      this.$router.push("/overlay", photo);
+    lightbox(index) {
+      console.log(index);
+      this.$emit("openLightbox");
+      this.$router.push("/overlay/" + index);
     }
   }
 };
 </script>
-
 
 <style lang="scss" scoped>
 .cards {
