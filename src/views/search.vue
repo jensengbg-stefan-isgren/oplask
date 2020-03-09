@@ -2,13 +2,8 @@
   <div>
     <h1>oPlask</h1>
     <label for="search_photo"></label>
-    <input
-      v-model="input"
-      type="text"
-      id="search_photo"
-      @keyup.enter="getPhotos"
-    />
-    <card />
+    <input v-model="input" type="text" id="search_photo" @keyup.enter="getPhotos" />
+    <card :photos="photos" />
   </div>
 </template>
 
@@ -16,7 +11,7 @@
 import card from "../components/card";
 export default {
   name: "search",
-  components: {},
+  components: { card },
   data() {
     return {
       input: "",
