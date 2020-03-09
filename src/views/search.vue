@@ -2,7 +2,12 @@
   <div>
     <h1>oPlask</h1>
     <label for="search_photo"></label>
-    <input v-model="input" type="text" id="search_photo" @keyup.enter="getPhotos" />
+    <input
+      v-model="input"
+      type="text"
+      id="search_photo"
+      @keyup.enter="getPhotos"
+    />
     <card :photos="photos" />
   </div>
 </template>
