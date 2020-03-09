@@ -15,8 +15,6 @@
   </div>
 </template>
 
-
-
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
 
