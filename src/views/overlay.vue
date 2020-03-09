@@ -19,11 +19,19 @@
 
 <script>
 export default {
+<<<<<<< Updated upstream
   methods: {
     closeOverlay() {
       this.$router.push("/");
     }
   }
+=======
+  /*   computed: {
+        photo() {
+            this.$routes.
+        }
+    } */
+>>>>>>> Stashed changes
 };
 </script>
 
