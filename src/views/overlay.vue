@@ -1,9 +1,11 @@
 <template>
   <div class="overlay">
     <section class="lightbox">
-      <button class="return">
-        <i class="fas fa-times"></i>
-      </button>
+      <div class="top">
+        <button @click="closeOverlay" class="closeOverlay">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
       <img class="img" src="../assets/test.jpg" alt />
       <div class="footer">
         <h3 class="author">
@@ -15,7 +17,15 @@
   </div>
 </template>
 
-
+<script>
+export default {
+  methods: {
+    closeOverlay() {
+      this.$router.push("/");
+    }
+  }
+};
+</script>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
@@ -34,13 +44,20 @@ $black: #071619;
   .lightbox {
     width: 50%;
 
-    .return {
+    .top {
       display: flex;
-      justify-self: flex-end;
-      color: white;
-      padding: 10px;
+      width: 100%;
+      justify-content: flex-end;
       background: none;
-      border: none;
+      .closeOverlay {
+        display: flex;
+        align-self: flex-end;
+        color: white;
+        padding: 10px;
+        background: none;
+        border: none;
+        cursor: pointer;
+      }
     }
 
     .img {
