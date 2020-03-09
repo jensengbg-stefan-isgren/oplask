@@ -1,5 +1,4 @@
-<<<<<<< Updated upstream
-=======
+
 <template>
   <div class="cards">
     <li @click="lightbox(photo)" class="card" v-for="(photo,index) in photos" :key="index">
@@ -7,6 +6,7 @@
     </li>
   </div>
 </template>
+
 
 
 <script>
@@ -17,15 +17,18 @@ export default {
   },
   data() {
     return {};
+
   },
   methods: {
     lightbox(photo) {
       console.log(photo);
       this.$router.push("/overlay", photo);
     }
+
   }
 };
 </script>
+
 
 <style lang="scss" scoped>
 .cards {
@@ -49,4 +52,4 @@ export default {
   }
 }
 </style>
->>>>>>> Stashed changes
+

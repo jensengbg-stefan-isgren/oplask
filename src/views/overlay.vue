@@ -17,23 +17,24 @@
   </div>
 </template>
 
+
 <script>
 export default {
-<<<<<<< Updated upstream
+
   methods: {
     closeOverlay() {
       this.$router.push("/");
     }
   }
-=======
+
   /*   computed: {
         photo() {
             this.$routes.
         }
     } */
->>>>>>> Stashed changes
 };
 </script>
+
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css?family=Quicksand&display=swap");
