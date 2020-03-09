@@ -21,6 +21,7 @@ $grey: #eeeeee;
   font-family: $quicksand;
   height: 100vh;
   width: 100vh;
-  display: grid;
+  display: flex;
+  justify-content: center;
 }
 </style>

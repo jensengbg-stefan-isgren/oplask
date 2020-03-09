@@ -1,15 +1,16 @@
 <template>
-  <div>
-    <h1>oPlask</h1>
+  <section class="home_section">
+    <h1 class="title">oPlask</h1>
     <label for="search_photo"></label>
     <input
+      class="input_search"
       v-model="input"
       type="text"
       id="search_photo"
       @keyup.enter="getPhotos"
     />
-    <card :photos="photos" />
-  </div>
+    <card class="card_section" :photos="photos" />
+  </section>
 </template>
 
 <script>
@@ -36,4 +37,34 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+}
+
+.home_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+
+.input_search {
+  width: 400px;
+  height: 50px;
+  border-radius: 80px;
+  outline: none;
+}
+
+.title {
+  align-self: flex-start;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+</style>
